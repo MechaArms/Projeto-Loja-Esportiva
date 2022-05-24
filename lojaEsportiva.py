@@ -16,7 +16,7 @@ def getDados():
     cont = 1
     n_cupom.append(0)
     print('\n' * 2)
-    print('--lista de compras--')
+    print('--Lista de Compras--')
     print('\nDigite o codigo do produto para inserir na nota de compra \nou digite "0" [Zero] para fechar a lista de compras\n')
     print('Cupom fiscal nº ',len(n_cupom))
     while True:
@@ -54,18 +54,17 @@ def getDados():
 def SetDados(lista,prod,qt,und,pedido): #impressão tela
     print('\n' * 2)
     print('{:^50}'.format('CAIXA LIVRE - VENDA'))
-    print('{:<10}{:>13}{:>6}{:>10}{:>13}'.format('Codigo','Nome','Qt','Val Unit','Val Item'))
-    print('{:<10}{:>13}{:>6}{:>10}{:>13}'.format('-'*6,'-'*13,'-'*2,'-'*8,'-'*8))
+    print('{:<5}{:>7}{:>15}{:>6}{:>10}{:>13}'.format('Item','Codigo','Nome','Qt','Val Unit','Val Item'))
+    print('{:<5}{:>7}{:>15}{:>6}{:>10}{:>13}'.format('-'*4,'-'*6,'-'*13,'-'*2,'-'*8,'-'*8))
 
     for i in range(len(lista)):
-        print('{:<10}{:>13}{:>6}{:>10.2f}{:>13.2f}'.format(lista[i],prod[i],qt[i],und[i],pedido[i]))
+        print('{:>4}{:>8}{:>15}{:>6}{:>10.2f}{:>13.2f}'.format(i+1,lista[i],prod[i],qt[i],und[i],pedido[i]))
 
     total = sum(pedido)
-    print('{:<10}{:>13}'.format('-'*39,'-'*8,))
-    print('{:<10}{:>42.2f}'.format('Total R$',total))
+    print('{:<10}{:>13}'.format('-'*43,'-'*8,))
+    print('{:>43}{:>13.2f}'.format('Total R$',total))
     total_fecha_caixa.append(total) #adicionando o valor total da nota para fechar o caixa
     print('\n'*2)
-    
     #troco
     troco = pagamento(total)
     print(f'\nO valor do troco é de: R$ {troco:.2f}')
@@ -103,8 +102,11 @@ def checkNovoCupom(): #pergunta novo cupom ou fechamento
         
 
 def fechamento(total_fecha_caixa): #fechamento caixa
+    print('\n' * 2)
+    print('--Fechamento de Caixa--')
     print('\nQuantidade de cupons emitidos: ', len(total_fecha_caixa))
-    print('Valores totais de cada cupom', total_fecha_caixa)
+    for i in range(len(total_fecha_caixa)):
+        print(f'Cupom nº {i+1} R$ {total_fecha_caixa[i]:.2f}')
     print('Total R$ {:<10.2f}'.format(sum(total_fecha_caixa)))
 
 getDados() #executando o codigo
@@ -113,7 +115,6 @@ getDados() #executando o codigo
 '''
 ----------------pendencias----------------
 *adição de novas variaveis no cupom:
-    - numero ordenado dos itens (1, 2, 3, ...)
     - formas de pagamento (imput);
     - cancelamento de produto e nota;
     - total em fechamento de quantas compras feitas em cartão, dinheiro, pix...
