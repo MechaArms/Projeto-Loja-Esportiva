@@ -10,11 +10,18 @@ Não se preocupe com impostos ou certificados ficais, pois o dono do bar comprou
 ----------------pendencias----------------
 
 *adição de novas variaveis no cupom:
+
     - formas de pagamento (imput);
+    
     - cancelamento de produto e nota;
+    
     - total em fechamento de quantas compras feitas em cartão, dinheiro, pix...
+    
 *ideia mais complexa:
+
     -imput diretamente pelo getDados (impressao da tela sai enquanto o usuario digita)
+    
 *cupons exportados em txt
+
 *fechamento caixa exportados em txt
 
