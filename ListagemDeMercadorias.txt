@@ -1,0 +1,10 @@
+100		bola			100.00
+101		camisa			250.50
+102		calça			150.00
+103		chuteira		300.00
+104		meia			050.00
+105		oculos_de_sol		001.99
+106		poster			005.99
+107		apito			003.50
+108		caneco			016.99
+109		chaveiro		008.90
