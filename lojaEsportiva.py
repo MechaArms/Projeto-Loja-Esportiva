@@ -1,8 +1,12 @@
-listaProdutos = ['bola', 'camisa', 'calça', 'chuteira', 'meia', 'oculos de sol', 'poster', 'apito', 'caneco', 'chaveiro']
+listaProdutos = []
+codigoProdutos = []
+listaPreços = []
 
-codigoProdutos = [100,101,102,103,104,105,106,107,108,109]
+from leitoraListaProdutos import setProdutos, setCodigos, setPrecos
 
-listaPreços = [100.00, 250.50, 150.00, 300.00, 50.00, 1.99, 5.99, 3.50, 16.99, 8.90]
+listaProdutos = setProdutos()
+codigoProdutos = setCodigos()
+listaPreços = setPrecos()
 
 n_cupom = []
 lista = []
@@ -110,17 +114,3 @@ def fechamento(total_fecha_caixa): #fechamento caixa
     print('Total R$ {:<10.2f}'.format(sum(total_fecha_caixa)))
 
 getDados() #executando o codigo
-
-
-'''
-----------------pendencias----------------
-*adição de novas variaveis no cupom:
-    - formas de pagamento (imput);
-    - cancelamento de produto e nota;
-    - total em fechamento de quantas compras feitas em cartão, dinheiro, pix...
-*ideia mais complexa:
-    -imput diretamente pelo getDados (impressao da tela sai enquanto o usuario digita)
-*lista de itens importados em txt
-*cupons exportados em txt
-*fechamento caixa exportados em txt
-'''
