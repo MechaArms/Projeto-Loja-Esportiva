@@ -17,7 +17,7 @@ Não se preocupe com impostos ou certificados ficais, pois o dono do bar comprou
     
 *adição de ideia mais complexa:
 
-    -imput diretamente pelo getDados (impressao da tela sai enquanto o usuario digita)
+    - imput diretamente pelo getDados (impressao da tela sai enquanto o usuario digita)
     
 *cupons exportados em txt
 
