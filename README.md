@@ -1,4 +1,4 @@
-# Projeto_Loja_Esportiva
+# Projeto Loja Esportiva
 Projeto de um sistema de caixa de uma loja de time de futebol
 
 O clube de futebol do boteco da esquina resolveu abrir a sua propria lojinha.
