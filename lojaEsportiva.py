@@ -16,6 +16,7 @@ qt = []
 prod = []
 total_fecha_caixa = []
 
+
 def getDados():
     cont = 1
     n_cupom.append(0)
@@ -119,7 +120,8 @@ def checkNovoCupom(): #pergunta novo cupom ou fechamento
                 getDados()
             else:
                 continue
-        
+
+                
 def deleteCupom():
     lista.clear()
     prod.clear()
